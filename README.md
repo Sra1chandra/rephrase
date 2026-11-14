@@ -1,77 +1,60 @@
 # rephrase
 
-Owned writing skill. 80% STE structure, anti-slop tells, scan-first layout.
-Text only. Facts and numbers stay. Invoke with `/rephrase`.
+Turns fluffy writing into something a busy person can read. Keeps the facts. Drops the padding.
 
-## Why `/rephrase` was missing
+Type `/rephrase`, paste your text, send.
 
-`/humanizer` shows in `/` because it is a **real folder**:
+## Before and after
+
+**Update**
+
+Before:
+
+> I wanted to take a moment to share a quick update. It's not just a small fix — it's a pivotal step in our broader reliability journey. We leveraged the new gateway to ensure seamless, robust auth, highlighting our commitment to security. Next, we'll continue to iterate. Let me know if you have any questions!
+
+After:
+
+> Auth now goes through the new gateway. The gateway validates the token, then forwards the request.
+
+**Slack**
+
+Before:
+
+> finished the auth PR. waiting on review from Sam. then ship behind the flag.
+
+After:
+
+> Auth PR is up. Waiting on Sam's review. After that, ship behind the flag.
+
+**Cold email**
+
+Before:
+
+> In the realm of modern enterprise solutions, companies often struggle to streamline operations and elevate efficiency. I'd love to connect for a quick 15-minute sync to discuss how we can leverage synergy to drive robust results for your organization.
+
+After:
+
+> Many companies that buy enterprise software still find it hard to simplify operations and raise efficiency. I would like a 15-minute call to see if we can help your organization.
+
+Numbers, names, and error messages stay as they were. Empty claims (like "we will continue to iterate") get dropped, not filled in.
+
+## Install
+
+In Cursor, open a new Agent chat and paste this:
 
 ```text
-~/.claude/skills/humanizer/SKILL.md
+Install the writing skill from https://github.com/Sra1chandra/rephrase so I can use /rephrase.
+Follow the install script in that repo. Then tell me when it is ready.
 ```
 
-Cursor (and Claude Code) load skills from that path. This repo had only a
-**symlink** at `.cursor/skills/rephrase/SKILL.md`. The slash picker skips that.
+Open a **new** Agent chat after that. Type `/rephrase`. Paste your draft.
 
-`scripts/install.sh` matches the humanizer install: `SKILL.md` is a regular
-file (hard link), and `~/.claude/skills/rephrase` points at this repo.
-
-## Installation
-
-From this repo:
-
-```bash
-chmod +x scripts/install.sh
-./scripts/install.sh
-```
-
-That does what humanizer's README does, locally:
-
-```bash
-mkdir -p ~/.claude/skills
-ln -sfn /absolute/path/to/rephrase ~/.claude/skills/rephrase
-```
-
-Also installs:
-
-| Path | Why |
-|---|---|
-| `~/.claude/skills/rephrase` | Same discovery path as `/humanizer` |
-| `~/.cursor/skills/rephrase` | Cursor user skills |
-| `.cursor/skills/rephrase/SKILL.md` | Project skill, hard-linked file |
-| `.claude/skills/rephrase/SKILL.md` | Claude Code project skill |
-
-Then **new Agent chat**. Type `/reph`. Pick **rephrase**. Paste text.
-
-Keep it on for the session: `/rephrase` then Option+Enter (Custom Mode).
-
-## Usage
+## Use
 
 ```text
 /rephrase
 
-[paste text]
+[your text]
 ```
 
-Optional: `Slack` or `doc` in the same message. That only changes length, not a heading kit.
-
-After you edit `SKILL.md` knobs or triggers:
-
-```bash
-python3 scripts/check_sync.py
-python3 scripts/check.py --self-test
-```
-
-## Layout
-
-```text
-SKILL.md                 # you own this
-references/
-examples.md
-scripts/check.py
-scripts/check_sync.py
-scripts/install.sh
-evals/
-hooks/
-```
+Add the word `Slack` if you want it short. Add `doc` if you want it longer. The facts stay the same either way.
