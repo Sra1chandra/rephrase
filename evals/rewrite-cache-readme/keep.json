@@ -1,0 +1,22 @@
+{
+  "must_keep": [
+    "Redis",
+    "60%",
+    "POST /v2/import",
+    "cache.flush()",
+    "300",
+    "CACHE_TTL"
+  ],
+  "must_absent": [
+    "leverage",
+    "leveraging",
+    "robust",
+    "seamless",
+    "seamlessly",
+    "utilizing",
+    "It should be noted",
+    "battle-tested"
+  ],
+  "must_not_invent": [],
+  "auto_from_source": false
+}

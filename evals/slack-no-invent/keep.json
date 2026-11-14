@@ -1,0 +1,10 @@
+{
+  "must_keep": ["auth PR", "Sam", "flag"],
+  "must_absent": ["leverage", "robust", "seamless", "Hope this helps", "Let me know"],
+  "must_not_invent": [
+    "continue to iterate",
+    "broader reliability",
+    "QA sign-off"
+  ],
+  "auto_from_source": false
+}

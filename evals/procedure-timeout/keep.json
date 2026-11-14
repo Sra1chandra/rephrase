@@ -1,0 +1,13 @@
+{
+  "must_keep": [
+    "sqlpipe",
+    "dial tcp: i/o timeout",
+    "5432",
+    "Postgres",
+    "RDS",
+    "Cloud SQL"
+  ],
+  "must_absent": ["leverage", "seamless", "robust"],
+  "must_not_invent": [],
+  "auto_from_source": false
+}

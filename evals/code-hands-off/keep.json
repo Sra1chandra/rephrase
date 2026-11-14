@@ -1,0 +1,14 @@
+{
+  "must_keep": [
+    "export function ttl(): number { return 300 }",
+    "300"
+  ],
+  "must_absent": [
+    "leverage",
+    "leverages",
+    "robust",
+    "seamless"
+  ],
+  "must_not_invent": [],
+  "auto_from_source": false
+}

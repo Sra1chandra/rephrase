@@ -1,0 +1,5 @@
+schema_version: "1.1"
+name: procedure-timeout
+expected_outcome: |
+  Numbered steps. sqlpipe. Error string `dial tcp: i/o timeout` unchanged.
+  Postgres port 5432 unchanged. RDS and Cloud SQL still named. No em dash.

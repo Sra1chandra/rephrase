@@ -1,0 +1,8 @@
+{
+  "name": "rephrase",
+  "description": "Rewrite or draft prose so a busy reader gets the facts on the first pass.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "keywords": ["writing", "editing", "STE", "prose", "rephrase"],
+  "skills": ["./"]
+}

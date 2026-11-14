@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: rewrite-cache-readme
+expected_outcome: |
+  A rewrite in 80% STE that keeps every fact: Redis, up to 60% in most cases,
+  automatic invalidation on write, POST /v2/import, cache.flush(), bulk writes
+  not tracked, TTL 300 seconds, CACHE_TTL.
